@@ -6,34 +6,31 @@ public class pa2 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int randNum = (int)(Math.random()*10);
-        System.out.println("I'm thinking of an integer between 1 and 10. You have three guesses");
-        int guess;
-        String[] ass = {"first", "second", "third"};
+        int randNum = 1 + (int)(Math.random() * 10);
 
         System.out.println(randNum);
 
+        System.out.println("I'm thinking of an integer in the range 1 and 10. You have three guesses.\n");
+        int guess;
+        String[] ass = {"first", "second", "third"};
+
         for (int i=0; i<3; i++){
-            System.out.println("Enter your " + ass[i] + " guess.");
+            System.out.print("Enter your " + ass[i] + " guess: ");
             guess = input.nextInt();
 
-            System.out.println(i);
-            if( i >= 2 && guess != randNum){
-                System.out.println("You lose. The number was " + randNum);
-                break;
-            }
             if(guess == randNum){
                 System.out.println("You win!");
+                break;
             }
             if(guess < randNum){
-                System.out.println("Your guess is too low.");
+                System.out.println("Your guess is too low.\n");
             }
             if(guess > randNum){
-                System.out.println("Your guess is too high.");
+                System.out.println("Your guess is too high.\n");
+            }
+            if( i >= 2){
+                System.out.println("You lose. The number was " + randNum);
             }
         }
-
-        System.out.println("RandNum: " + randNum);
-
     }
 }
