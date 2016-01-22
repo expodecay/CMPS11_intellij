@@ -1,6 +1,11 @@
 /**
- * Created by Rick on 1/19/2016.
+ * pa2.java
+ * Rick Ramirez
+ * riryrami
+ * Guess.java
+ * This program generates a random number, then gives the user three chances to guess the number through the keyboard.
  */
+
 import java.util.Scanner;
 public class pa2 {
     public static void main(String[] args) {
