@@ -34,13 +34,13 @@ public class pa3 {
             System.out.print("Enter another positive integer: ");
             while(!input.hasNextInt()){
                 System.out.print("Enter another positive integer: ");
-                input.next();
+                input.next();  // Needed to prevent infinite loop. Open to any data type, so will not crash.
             }
             b = input.nextInt();
         }while (b <= 0);
 
-        // Calculate greatest common divisor.
-        int first = a, second = b;
+        // Calculate greatest common divisor using Euclidean Algorithm.
+        int first = a, second = b;  // Store users input
         r = a % b;
         while (r != 0) {
             a = b;
