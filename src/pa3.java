@@ -3,7 +3,7 @@
  */
 
 /**
- * pa2.java
+ * pa3.java
  * Rick Ramirez
  * riryrami
  * GCD.java
