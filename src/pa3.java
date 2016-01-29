@@ -1,8 +1,4 @@
 /**
- * Created by Rick on 1/28/2016.
- */
-
-/**
  * pa3.java
  * Rick Ramirez
  * riryrami
