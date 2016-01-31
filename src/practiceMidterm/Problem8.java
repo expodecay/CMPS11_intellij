@@ -21,7 +21,7 @@ public class Problem8 {
                 if (i < 2) {b = input.nextInt();break;}
                 if (i < 3) {c = input.nextInt();break;}
                 if (i < 4) {d = input.nextInt();break;}
-                if(i<5) {e = input.nextInt();break;}
+                if (i < 5) {e = input.nextInt();break;}
             }
             i++;
         }

@@ -66,7 +66,10 @@ public class pa3 {
 *
 *          b = q_1 * r_0 + r_1
 *
-*          r_0 = q_2 * r_1 + r_2 ...
+*          r_0 = q_2 * r_1 + r_2
+*                   .
+*                   .
+*                   .
 *
 * Where a and b are teh two numbers being considered, q is the quotient between them, and r is the remainder.
 * */
