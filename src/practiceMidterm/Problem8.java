@@ -7,7 +7,7 @@ package practiceMidterm;
 import java.util.Scanner;
 public class Problem8 {
     public static void main(String[] args) {
-        int a=0 , b = 0, c = 0, d = 0, e = 0, temp, i = 0;
+        int a=0 , b = 0, c = 0, d = 0, e = 0, temp, i = 0;  // MUST INITIALIZE VARIABLES!!
         Scanner input = new Scanner(System.in);
         while (i < 5) {
             System.out.print("Enter an integer: ");
