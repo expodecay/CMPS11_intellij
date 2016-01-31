@@ -2,7 +2,7 @@ package practiceMidterm;
 /**
  * Created by Rick on 1/30/2016.
  *
- * PROMPTS THE USER FOR FIVE INTEGERS (ONE BY ONE). REPEATS IF TOKEN OTHER THAN INT IS ENTERED. ARRANGES IN ASSENDING ORDER.
+ * PROMPTS THE USER FOR FIVE INTEGERS (ONE BY ONE). REPEATS IF TOKEN OTHER THAN INT IS ENTERED. ARRANGES IN ASCENDING ORDER.
  */
 import java.util.Scanner;
 public class Problem8 {
@@ -13,8 +13,7 @@ public class Problem8 {
             System.out.print("Enter an integer: ");
             while (true) {
                 while (!input.hasNextInt()) {
-                    System.out.println("Not an integer!!");
-                    System.out.print("Enter an integer: ");
+                    System.out.print("Not an integer!! Please enter an integer: ");
                     input.next();
                 }
                 if (i < 1) {a = input.nextInt();break;}
