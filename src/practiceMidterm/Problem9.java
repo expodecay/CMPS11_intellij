@@ -35,7 +35,7 @@ public class Problem9 {
 /*
         SAMPLE OUTPUT
 
-* Integer   Square    Cube      Quartic   Quintic
+Integer   Square    Cube      Quartic   Quintic
 -----------------------------------------------
 1         1         1         1         1
 2         4         8         16        32
