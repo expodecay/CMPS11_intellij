@@ -11,7 +11,7 @@ public class Problem8 {
         Scanner input = new Scanner(System.in);             // Create Scanner object
         while (i < 5) {                                 // Need five iterations
             System.out.print("Enter an integer: ");         // Ask the user for input
-            while (true) {                              // Start validation loop
+            while(true){                              // Start validation loop
                 while (!input.hasNextInt()) {               // Validation criterion
                     System.out.print("Not an integer!! Please enter an integer: ");     // if not satisfied, clarify
                     input.next();                           // throw out input, and wait for a new one
