@@ -27,7 +27,7 @@ public class Problem9 {
         System.out.printf("%-10s%-10s%-10s%-10s%-10s\n","Integer", "Square", "Cube", "Quartic", "Quintic");
         System.out.println("-----------------------------------------------");
         for (int i = 1; i<=25; i++){
-            System.out.format("%-10s%-10s%-10s%-10s%-10s\n" ,i  , square(i) , cube(i) , quartic(i)  ,quintic(i));
+            System.out.format("%-10s%-10%-10s%-10s%-10s\n" ,i  , square(i) , cube(i) , quartic(i)  ,quintic(i));
             System.out.printf("");
         }
     }
