@@ -15,6 +15,7 @@ public class Problem4 {
         x = f( (int)z, b);
         System.out.println(a + " " + b + " " + c );
         System.out.println(x + " " + y + " " + z );
+        System.out.println((int)(35.0)+5);
     }
     static int f(int n, int m){
         int k = n + m;
