@@ -11,7 +11,7 @@ public class pa4 {
         double resolution = Math.pow(10,-2), tolerance = Math.pow(10,-7), threshold = Math.pow(10,-3);
         int degree;
         double[] c;
-        double left, right, a, b;
+        double left, right, a, b; // Endpoints and interval partitions
 
         // Prompt user for degree of polynomial.
         Scanner input = new Scanner(System.in);
@@ -26,7 +26,7 @@ public class pa4 {
         }
 
         // Prompt user for endpoints
-        System.out.print("Enter the left and right endpoints: ");
+        System.out.print("Enter the left and right endpoints: \n");
         left = input.nextDouble();
         right = input.nextDouble();
 
@@ -39,8 +39,8 @@ public class pa4 {
         while(a < right){
             if(poly(c,a) * poly(c,b) <= 0) {  // If function changes sign in sub-interval, find root.
                 double root = findRoot(c, a, b, tolerance);
-                System.out.print("Root found at ");
-                System.out.printf("%.5f%n", root);  // Print root to within 5 decimal places.
+                //System.out.print("Root found at ");
+                System.out.printf("Root found at " +"%.5f%n", root);  // Print root to within 5 decimal places.
                 i++;
             }
             else if(poly(diff(c),a) * poly(diff(c), b) <= 0){  // If F'(x) changes sign, find even root.
