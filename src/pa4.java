@@ -26,9 +26,10 @@ public class pa4 {
         }
 
         // Prompt user for endpoints
-        System.out.print("Enter the left and right endpoints: \n");
+        System.out.print("Enter the left and right endpoints: ");
         left = input.nextDouble();
         right = input.nextDouble();
+        System.out.println("");
 
         /*  Main Loop:   Same logic as findRoot() */
         a = left;
