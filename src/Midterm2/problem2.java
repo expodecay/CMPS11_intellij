@@ -2,9 +2,9 @@ package Midterm2;
 
 /**
  * Fill in the definition of function concatenate() below. This function takes as input two int arrays A
- and B, of any length, and returns a new int array which is the concatenation of A and B, i.e. the length of
- the returned array is the sum of the lengths of A and B, and the contents of the returned array are the
- values in A followed by the values in B.
+   and B, of any length, and returns a new int array which is the concatenation of A and B, i.e. the length of
+   the returned array is the sum of the lengths of A and B, and the contents of the returned array are the
+   values in A followed by the values in B.
  */
 import java.util.Arrays;
 public class problem2 {

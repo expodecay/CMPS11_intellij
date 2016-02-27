@@ -1,29 +1,37 @@
 package Midterm2;
 
 /**
- * Write a recursive function called sum() that takes a single int n as input and returns the sum of the
- positive integers from 1 to n. (Hint: this is the same as the recursive function that computes n! (n
- factorial) discussed in class, except with multiplication replaced by addition.)
-
- static int sum(int n){. . . . }
-
- */
-import java.util.Scanner;
+ * Determine the output of the following Java program. Note that the function f() is recursive.
+ * */
 public class problem3 {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        System.out.printf("Enter an integer: ");
-        int a = input.nextInt();
-        int b = sum(a);
-        System.out.println(b);
+        System.out.println(f(7));
+    }
+    static int f(int n){
+        System.out.println( "f(" + n + ")" );
+        if(n<=1)
+            return 2; // And a final value of 2 to the total.
+        else
+            return f(n-1) + 5;  // Keeps calling/printing f(n-1) but only adds 5 to each iteration
     }
 
-    static int sum(int n){
-
-        int total = 0;
-        for(int i = 0; i<=n; i++){
-            total+=i;
-        }
-        return total;
-    }
 }
+/*
+* Within f(n-1) another value of 5 gets carried through until f(1) hits.
+*
+*   if n = 7, we have
+*
+*       f(7-1) + 5
+*           f(6-1) + 5
+*               f(5-1) + 5
+*                   f(3-1) + 5
+*                       f(2-1) + 5
+*                     --------------
+*                                30
+*                       f(2)  ->  2
+*                    ----------------
+*                                32
+*
+* See problem for if it still doesn't make sense.
+* */
+
