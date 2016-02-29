@@ -11,16 +11,16 @@ package Midterm2;
 import java.util.*;
 public class problem11 {
     public static void main(String[] args) {
-        String[] ass = { "one", "two", "three", "four"};
+        String[] ass = { "one", "two", "three", "four", "beaver","cat","four", "spider"};
         sortStringArray(ass);
         System.out.println(Arrays.toString(ass));
 
     }
     static void sortStringArray(String[] X){
 
-        for(int i = X.length; i>1; i--){
-            for(int j = 0; j<i-1; j++){
-                if(X[j].compareTo(X[j+1])>0){
+        for(int i = X.length; i>1; i--){  // traverse list from right to left
+            for(int j = 0; j<i-1; j++){    // take left element and (up to last element in list)
+                if(X[j].compareTo(X[j+1])>0){ // compare that element with right hand neighbor ((-) implies argument should come before)
                     swap(X, j,j+1);
                 }
             }
@@ -31,6 +31,42 @@ public class problem11 {
         Y[a] = Y[b];
         Y[b] = temp;
     }
-
-
 }
+/*
+* list = {"one", "two", "three", "four"}
+*
+* i = 4 ----> j ends at 3 (non-inclusive)
+*
+*   j = 0 compare j=1
+*       one.compareTo(two) -> +1
+*
+*   j = 1 compare j = 2
+*       two.compareTo(three) -> -1
+*           swap(two and three)
+*               list = {"one", "three","two", "four"}
+*
+*   j = 2 compare j = 3
+*       two.compareTo(four) -> -1
+*           swap(two and four)
+*               list = {"one", "three", "four","two"}
+*
+* i = 3 ----> j ends at 2 (non-inclusive)
+*
+*   j = 0
+*       one.compareTo(three) -> +1
+*
+*   j = 1
+*       three.compareTo(four) -> -1
+*           swap(three and four)
+*               list = {"one", "four", "three", "two"}
+*
+*i = 2 ---> j ends at 1 (non-inclusive)
+*
+*   j = 0
+*       one.compareTo(four) -> -1
+*           swap(one and four)
+*               list = {"four", "three", "two", "one"}
+*
+* i = 1 ---> break
+*
+* */

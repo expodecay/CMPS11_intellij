@@ -16,6 +16,7 @@ public class problem9 {
         System.out.println(dist.getFeet());
         System.out.println(dist.getFurlongs());
         dist.getFeet();
+        System.out.println(dist);
 
     }
 }
@@ -41,7 +42,7 @@ class Distance{
         System.out.println(distance + " meters is " + distance*3.28084 + " feet.");
         return distance*3.28084;
     }
-   /* public String toString(){  // without this the printed value is gibberish (see stdout: 1)
+    public String toString(){  // without this the printed value is gibberish (see stdout: 1)
         return ""+distance;
-    }*/
+    }
 }

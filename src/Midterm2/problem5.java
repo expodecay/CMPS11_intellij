@@ -16,7 +16,7 @@ class Problem5{
     static int f(int[][] M){               // Calculates determinant of a 2X2 matrix
         return M[0][0]*M[1][1]-M[0][1]*M[1][0];
     }
-    static int[][] g(int[][] M){          // Reflects along diagonal
+    static int[][] g(int[][] M){          // Transpose
         int[][] N = new int[2][2];
         for(int i=0; i<2; i++)
             for(int j=0; j<2; j++)

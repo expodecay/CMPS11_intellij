@@ -9,7 +9,7 @@ package Midterm2;
 import java.util.Arrays;
 public class problem2 {
     public static void main(String[] args) {
-        int[] one = {1,2,3,4};
+        int[] one = {1,2,3,4,9,9};
         int[] two = {5,6,7,8};
         int[] three = concatenate(one, two);
         System.out.println(Arrays.toString(three));
@@ -17,11 +17,11 @@ public class problem2 {
 
     static int[] concatenate(int[] A, int[] B){
         int[] three = new int[A.length + B.length];
-         for(int i  = 0; i<A.length;i++){
+         for(int i  = 0; i < A.length; i++){                // loop up the length of A
              three[i] =A[i];
          }
-        for(int i = A.length; i < A.length+B.length; i++){
-            three[i] = B[i-A.length];
+        for(int i = A.length; i < A.length+B.length; i++){  // loop up the from the end of A to the total length
+            three[i] = B[i-A.length];                       // need to match index 0 in array B
         }
 
     return three;

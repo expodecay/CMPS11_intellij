@@ -30,14 +30,18 @@ class Blah{
     }
 
     // Determines if input is of Blah type, then compares with another object of Blah type.
-    public boolean equals(Object x){  // equals() takes object as parameter
+    public boolean equals(Object x){  // equals() takes object as parameter (object can be anything)
         boolean eq = false;
         Blah B;                       // Create an object of the Blah class
         if( x instanceof Blah ){      // Cast x to Blah and assign to variable B.
+            System.out.println(x + " IS an instance of Blah.");
             B = (Blah)x;
             eq = (foo==B.foo && bar==B.bar); // foo and bar refer to A.    B.foo and B.bar refer to B
             System.out.println("foo: "+foo);
             System.out.println("B.foo: " + B.foo);
+        }
+        if(!(x instanceof Blah)){
+            System.out.println(x +" is not an instance of Blah.");
         }
         return eq;
     }
@@ -52,6 +56,8 @@ class BlahTest{
         A.mult();
         B.setBar(45.0);
         int b = 6;
+        String c = "ass";
+        System.out.println(A.equals(c));
         System.out.println(A.equals(b));
         System.out.println(A.equals(B));
     }
