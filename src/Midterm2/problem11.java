@@ -11,15 +11,15 @@ package Midterm2;
 import java.util.*;
 public class problem11 {
     public static void main(String[] args) {
-        String[] ass = { "one", "two", "three", "four", "beaver","cat","four", "spider"};
+        String[] ass = { "bat","one", "two", "three", "four", "beaver","cat","four", "spider"};
         sortStringArray(ass);
         System.out.println(Arrays.toString(ass));
 
     }
     static void sortStringArray(String[] X){
 
-        for(int i = X.length; i>1; i--){  // traverse list from right to left
-            for(int j = 0; j<i-1; j++){    // take left element and (up to last element in list)
+        for(int i = X.length-1; i>0; i--){  // traverse list from right to left
+            for(int j = 0; j < i-1; j++){    // take left element and (up to last element in list)
                 if(X[j].compareTo(X[j+1])>0){ // compare that element with right hand neighbor ((-) implies argument should come before)
                     swap(X, j,j+1);
                 }

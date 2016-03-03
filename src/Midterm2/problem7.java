@@ -14,7 +14,7 @@ public class problem7 {
     }
     static int getMaxIndex(int[] A){
         int temp = 0;                       // Temporary index
-        for(int i = 0; i<A.length-1; i++) {
+        for(int i = 0; i<A.length; i++) {
             if (A[i] > A[temp]) {           // If the element at i is larger than element at temp
                 temp = i;                   // Assign temp to new value
             }

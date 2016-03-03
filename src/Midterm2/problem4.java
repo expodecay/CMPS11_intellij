@@ -19,7 +19,7 @@ public class problem4 {
 
     // Recursive version
     static int sum(int n){
-        if(n <= 1){         // Base case
+        if(n == 1){         // Base case
             return 1;
         }
         else{
