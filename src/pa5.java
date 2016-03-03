@@ -9,8 +9,11 @@ public class pa5 {
         int i, n = args.length;
         for (i = 0; i < n; i++) {
             try {
-                int a = Integer.valueOf(args[i+1]);
-                verboseOutput(args[i], a);
+                if(args[0].equals("-v")){
+                    int a = Integer.valueOf(args[i]);
+                    verboseOutput(a);
+                }
+
 
             } catch (Exception e1) {
                 try{
@@ -25,24 +28,22 @@ public class pa5 {
     }
 
     // Calculate number of solutions and print them
-    static void verboseOutput(String verbose,int n) {
-
-        if (verbose == "-v") {
-            int[] array = initialize(n);
-            int m = numIterations(n);
-            for (int i = 0; i <= m - 1; i++) {
-                if (i == 0) {
-                    if (isSolution(array)) {
-                        print(array);
-                    }
-                }
-                next_permutation(array);
+    static void verboseOutput(int n) {
+        int[] array = initialize(n);
+        int m = numIterations(n);
+        for (int i = 0; i <= m - 1; i++) {
+            if (i == 0) {
                 if (isSolution(array)) {
                     print(array);
                 }
             }
-            standardOutput(n);
+            next_permutation(array);
+            if (isSolution(array)) {
+                print(array);
+            }
         }
+        standardOutput(n);
+
     }
     static void standardOutput(int n) {
         int numSolutions = 0;
