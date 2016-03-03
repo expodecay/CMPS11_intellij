@@ -14,7 +14,6 @@ public class pa5 {
             } catch (NumberFormatException e1) {
                 System.out.println("no!");
             }
-            verboseOutput(6);
         }
     }
 
