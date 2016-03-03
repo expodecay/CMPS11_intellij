@@ -7,13 +7,10 @@ import java.util.Scanner;
 public class pa5 {
     public static void main(String[] args) {
         int n = args.length;
-        if(n==2) {
-            try {
-                if(args[0].equals("-v")) {
-                    int a = Integer.valueOf(args[1]);
-                    verboseOutput(a);
-                }
-            } catch (Exception e1){
+        if(n== 0){
+            try{
+            }
+            catch (Exception e1){
                 usage();
             }
         }
@@ -21,7 +18,17 @@ public class pa5 {
             try{
                 int a = Integer.parseInt(args[0]);
                 standardOutput(a);
-            }catch (Exception e2){
+            }catch (Exception e1){
+                usage();
+            }
+        }
+        if(n==2) {
+            try {
+                if(args[0].equals("-v")) {
+                    int a = Integer.valueOf(args[1]);
+                    verboseOutput(a);
+                }
+            } catch (Exception e2){
                 usage();
             }
         }
