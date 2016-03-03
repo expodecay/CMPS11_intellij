@@ -6,23 +6,18 @@ import java.util.Scanner;
 
 public class pa5 {
     public static void main(String[] args) {
-        int i, n = args.length;
-        for (i = 0; i < n; i++) {
-            try {
-                if(args[0].equals("-v")){
-                    int a = Integer.valueOf(args[i]);
-                    verboseOutput(a);
-                }
-
-
-            } catch (Exception e1) {
-                try{
-                    int a = Integer.valueOf(args[i]);
-                    standardOutput(a);
-                }catch (Exception e2){
-                    System.out.println("Usage: Queens [-v] number");
-                    System.out.println("Option: -v  verbose output, print all solutions");
-                }
+        try {
+            if(args[0].equals("-v")){
+                int a = Integer.valueOf(args[2]);
+                verboseOutput(a);
+            }
+        } catch (Exception e1) {
+            try{
+                int a = Integer.valueOf(args[0]);
+                standardOutput(a);
+            }catch (Exception e2){
+                System.out.println("Usage: Queens [-v] number");
+                System.out.println("Option: -v  verbose output, print all solutions");
             }
         }
     }
