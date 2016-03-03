@@ -9,13 +9,14 @@ public class pa5 {
         int i, n = args.length;
         for (i = 0; i < n; i++) {
             try {
-                int a = Integer.valueOf(args[i]);
-                standardOutput(a);
-            } catch (NumberFormatException e1) {
+                int a = Integer.valueOf(args[i+1]);
+                verboseOutput(args[i], a);
+
+            } catch (Exception e1) {
                 try{
-                    int a = Integer.valueOf(args[i+1]);
-                    verboseOutput(args[i], a);
-                }catch (NumberFormatException e2){
+                    int a = Integer.valueOf(args[i]);
+                    standardOutput(a);
+                }catch (Exception e2){
                     System.out.println("Usage: Queens [-v] number");
                     System.out.println("Option: -v  verbose output, print all solutions");
                 }
