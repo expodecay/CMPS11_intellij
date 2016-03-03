@@ -12,27 +12,36 @@ public class pa5 {
                 int a = Integer.valueOf(args[i]);
                 standardOutput(a);
             } catch (NumberFormatException e1) {
-                System.out.println("no!");
+                try{
+                    int a = Integer.valueOf(args[i+1]);
+                    verboseOutput(args[i], a);
+                }catch (NumberFormatException e2){
+                    System.out.println("Usage: Queens [-v] number");
+                    System.out.println("Option: -v  verbose output, print all solutions");
+                }
             }
         }
     }
 
     // Calculate number of solutions and print them
-    static void verboseOutput(int n){
-        int[] array =  initialize(n);
-        int m = numIterations(n);
-        for(int i = 0; i<=m-1; i++) {
-            if(i==0) {
+    static void verboseOutput(String verbose,int n) {
+
+        if (verbose == "-v") {
+            int[] array = initialize(n);
+            int m = numIterations(n);
+            for (int i = 0; i <= m - 1; i++) {
+                if (i == 0) {
+                    if (isSolution(array)) {
+                        print(array);
+                    }
+                }
+                next_permutation(array);
                 if (isSolution(array)) {
                     print(array);
                 }
             }
-            next_permutation(array);
-            if(isSolution(array)) {
-                print(array);
-            }
+            standardOutput(n);
         }
-        standardOutput(n);
     }
     static void standardOutput(int n) {
         int numSolutions = 0;
