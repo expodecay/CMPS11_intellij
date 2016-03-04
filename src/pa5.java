@@ -7,11 +7,17 @@ import java.util.Scanner;
 public class pa5 {
     public static void main(String[] args) {
         int n = args.length;
-        if(n== 0){
+        if(n==0){
             try{
+                usage();
             }
             catch (Exception e1){
+            }
+        }
+        if(n>0){
+            try{
                 usage();
+            }catch (Exception e){
             }
         }
         if(n==1){
