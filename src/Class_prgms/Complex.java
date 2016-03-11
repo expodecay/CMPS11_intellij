@@ -13,19 +13,12 @@ package Class_prgms;
 //-----------------------------------------------------------------------------
 class Complex{
     public static void main(String[] args) {
-        Complex ass = new Complex(0,0);
-        Complex bitch = new Complex("3.5+1.2i");
-        Complex cock = new Complex(3.5,1.2);
-        Complex tits = new Complex(5.4,9.8);
-        double ggg = 3.0;
-        System.out.println(bitch);
-        String str =  "3.5+4.2i";
-        double[] C = parseComplex(str);
-        System.out.println(tits);
-        System.out.println(str);
-        System.out.println("Re("+str+") = "+C[0]);  // real part
-        System.out.println("Im("+str+") = "+C[1]);  // imaginary part
-
+        Complex ass = new Complex(2,3);
+        Complex bitch = new Complex(-4,-5);
+        Complex cock = new Complex("i");
+        Complex tits = new Complex(-8,-9);
+        System.out.println(ass.sub(bitch));
+        System.out.println(valueOf(cock.im));
     }
 
     //--------------------------------------------------------------------------
@@ -58,7 +51,9 @@ class Complex{
         // Fill in this constructor.
         // It should accept expressions like "-2+3i", "2-3i", "3", "5i", etc..
         // Throw a NumberFormatException if s cannot be parsed as Complex.
-        parseComplex(s);
+        double[] c = parseComplex(s);
+        this.re = c[0];
+        this.im = c[1];
     }
 
     //---------------------------------------------------------------------------
@@ -124,7 +119,7 @@ class Complex{
     // Throw an ArithmeticException with appropriate message if
     // z.equals(Complex.ZERO).
     Complex div(Complex z){
-        if(this.equals(Complex.ZERO)){
+        if(z.equals(Complex.ZERO)){
             throw new ArithmeticException("Division by Zero error");
         }
         Complex w = new Complex(0,0);
@@ -175,8 +170,8 @@ class Complex{
     public String toString(){
         if (im == 0) return re + "";
         if (re == 0) return im + "i";
-        if (im <  0) return re + " - " + (-im) + "i";
-        return re + " + " + im + "i";
+        if (im <  0) return re + "-" + (-im) + "i";
+        return re + "+" + im + "i";
     }
 
     // equals()
@@ -211,7 +206,8 @@ class Complex{
     // valueOf()
     // Return a new Complex constructed from s.
     static Complex valueOf(String s){
-        return new Complex(s);
+        double[] c = parseComplex(s);
+        return new Complex(c[0], c[1]);
     }
 
     static double[] parseComplex(String str){
