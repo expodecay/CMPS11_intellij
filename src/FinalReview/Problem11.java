@@ -51,7 +51,7 @@ class DownCounter extends AbstractCounter{
     }
     void click(){
        // System.out.println("value::  " + this.value);
-        value -= 1;
+        value-- ;
         if(this.value == 0){
             this.reset();
         }
